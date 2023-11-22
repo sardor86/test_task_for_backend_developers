@@ -1,0 +1,10 @@
+__pycahe__/
+venv/
+.idea/
+
+.env
+
+test_task_project/__pycache__/
+
+statistic/__pycache__/
+statistic/migrations/__pycache__/
