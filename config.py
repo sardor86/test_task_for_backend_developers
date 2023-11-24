@@ -11,11 +11,10 @@ class Django:
 
 @dataclass
 class DataBase:
-    host: str
-    port: int
     user: str
     password: str
     db_name: str
+    host: str
 
 
 @dataclass
@@ -34,10 +33,9 @@ def load_config(path: str = None) -> Config:
                       debug=env.bool('DEBUG')
                   ),
                   db=DataBase(
-                      host=env.str('DB_HOST'),
-                      port=env.int('DB_PORT'),
-                      user=env.str('DB_USER'),
-                      password=env.str('DB_PASS'),
-                      db_name=env.str('DB_NAME')
+                      db_name=env.str('POSTGRES_DB'),
+                      user=env.str('POSTGRES_USER'),
+                      password=env.str('POSTGRES_PASSWORD'),
+                      host=env.str('DB_HOST')
                   )
               )

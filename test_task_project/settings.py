@@ -60,7 +60,7 @@ DATABASES = {
         'USER': CONFIG.db.user,
         'PASSWORD': CONFIG.db.password,
         'HOST': CONFIG.db.host,
-        'PORT': CONFIG.db.port,
+        'PORT': 5432,
     }
 }
 
